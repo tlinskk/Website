@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ульяновська Юлія Вікторівна</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    header {
+      background-color: #444;
+      color: #fff;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo {
+      position: absolute;
+      left: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ddd8d8;
+}
+    .hero {
+      display: flex;
+      padding: 40px 40px;
+      background-color: #ddd8d8;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      margin-right: 40px;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+   
+    .hero-text h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    section {
+      padding: 30px 20px;
+      background-color: #d7d4d4;
+      margin: 10px 0;
+    }
+
+    h1 {
+      border-bottom: 2px solid #595959;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    #education h2 {
+      font-size: 28px;
+    }
+
+    #education li strong {
+      font-size: 20px;
+      color: #333;
+    }
+
+    #disciplines h2 {
+      text-align: right;
+      font-size: 24px;
+    }
+
+    .disciplines {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .disciplines span {
+      display: inline-block;
+      background-color: #eee;
+      padding: 8px 16px;
+      margin: 5px;
+      border-radius: 15px;
+    }
+
+    #contacts {
+      background-color: #444;
+      color: white;
+    }
+
+    #contacts a {
+      color: #cfcfcf;
+    }
+
+    footer {
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="new_design.png" alt="Маленьке фото" />
+      </div>
+      <ul>
+        <li><a href="#about">Про мене</a></li>
+        <li><a href="#education">Освіта</a></li>
+        <li><a href="#disciplines">Дисципліни</a></li>
+        <li><a href="#activity">Діяльність</a></li>
+        <li><a href="#materials">Додатковий матеріал</a></li>
+        <li><a href="#contacts">Контакти</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <img src="photo1.jpg" alt="Фото викладача" />
+    <div class="hero-text">
+      <h1>Ульяновська Юлія Вікторівна</h1>
+      <p>Завідувачка кафедри, доцент, кандидат технічних наук</p>
+    </div>
+  </div>
+
+  <section id="about">
+    <h1>Про мене</h1>
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+  
+      <!-- Перший блок -->
+      <div style="display: flex; flex-basis: 100%; align-items: center; flex-direction: row-reverse; justify-content: center; padding: 20px 0;">
+        <img src="umsf-adm.jpg" alt="Фото праворуч" style="width: 300px; height: auto; border-radius: 15px; margin-left: 40px;" />
+        <p style="font-size: 1.2em; max-width: 400px;">
+          Завідувач кафедри, доцент, кандидат технічних наук та інженерії програмного забезпечення в Університеті митної справи та фінансів.
+        </p>
+      </div>
+  
+      <!-- Другий блок -->
+      <div style="display: flex; flex-basis: 100%; align-items: center; justify-content: center; padding: 20px 0;">
+        <img src="unnamed.jpg" alt="Фото ліворуч" style="width: 300px; height: auto; border-radius: 10px; margin-right: 40px;" />
+        <p style="font-size: 1.2em; max-width: 400px;">
+          За освітою викладач математики, маю науковий ступінь кандидата технічних наук.
+        </p>
+      </div>
+  
+    </div>
+  </section>
+  
+  
+
+  <!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Освіта</title>
+  <style>
+    .year {
+      font-size: 2em; /* Можна змінити на 1.5em або 20px, як зручно */
+   
+    }
+    #education ul li {
+      margin-bottom: 1em; /* Це і створить ту саму "порожню строчку" */
+    }
+  </style>
+</head>
+<body>
+
+  <section id="education">
+    <h1>Освіта</h1>
+    <ul>
+      <li><strong class="year">1997 р.: </strong> Дніпропетровський національний університет, спеціальність "Математика, викладач математики".</li>
+      <li><strong class="year">2005 р.: </strong> Кандидат технічних наук, спеціальність 05.13.06 – автоматизовані системи управління.</li>
+    </ul>
+  </section>
+
+</body>
+</html>
+
+
+  <section id="disciplines">
+    <h1>Дисципліни</h1>
+    <div class="disciplines">
+      <h2>Дисципліни, що викладаю:</h2>
+      <div style="margin-top: 20px;">
+        <span style="display: block;">Комп'ютерна дискретна математика</span>
+        <span style="display: block;">Сучасні методи теорії інформації та кодування</span>
+        <span style="display: block;">Теорія алгоритмів</span>
+        <span style="display: block;">Теорія прийняття рішень</span>
+        <span style="display: block;">Інтелектуальні системи підтримки прийняття рішень</span>
+        <span style="display: block;">Методи та системи штучного інтелекту</span>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Діяльність</title>
+  <style>
+    #activity ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #activity li {
+      display: flex;
+      align-items: flex-start;
+      border-bottom: 1px solid #ccc;
+      padding: 0.5em 0;
+    }
+
+    .year {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+      width: 140px; /* фіксована ширина для вирівнювання */
+      flex-shrink: 0;
+    }
+
+    .description {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <section id="activity">
+    <h1>Діяльність</h1>
+    <ul>
+      <li>
+        <div class="year">З 2018 року</div>
+        <div class="description">В.о. завідувача кафедри інформаційних систем та технологій.</div>
+      </li>
+      <li>
+        <div class="year">З 2019 року</div>
+        <div class="description">Завідувач кафедри комп’ютерних наук та інженерії програмного забезпечення.</div>
+      </li>
+      <li>
+        <div class="year">2018 р.</div>
+        <div class="description">Заступник секретаря приймальної комісії, участь у конкурсі «День острова Токто».</div>
+      </li>
+      <li>
+        <div class="year">2019 р.</div>
+        <div class="description">Заступник секретаря приймальної комісії (наказ №174).</div>
+      </li>
+      <li>
+        <div class="year">З 2021 року</div>
+        <div class="description">Куратор груп К 21-1м, К 22-1м, К 22-2м.</div>
+      </li>
+    </ul>
+  </section>
+
+</body>
+</html>
+
+
+
+
+<section id="materials">
+    <h1>Додатковий матеріал</h1>
+    <p><strong>Сертифікати:</strong></p>
+    <div class="certificates">
+      <img src="ph1.png" alt="Фото 1">
+      <img src="ph2.jpg" alt="Фото 2">
+      <img src="ph3.png" alt="Фото 3">
+    </div>
+  
+    <p><a href="https://drive.google.com/drive/folders/1P_HT9tmB8ErpB3ldon43uzotQXOplcn0">Усі сертифікати</a></p>
+    <p><a href="https://drive.google.com/file/d/1REAPOHEQFfLr2nUF5np_LLbwGoaGRjNh/view">Основні наукові та навчально-методичні праці</a></p>
+  </section>
+  
+  <style>
+    .certificates {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+  
+    .certificates img {
+      width: 260px;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+  
+  
+  <!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти</title>
+    <style>
+        footer {
+            text-align: center; /* Все в середині */
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        #contacts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        #contacts p {
+            margin: 10px 0;
+        }
+        /* Стиль для рядка з поштою і профілем */
+        #contacts .contact-row {
+            display: flex;
+            justify-content: space-between;
+            width: 80%; /* Зменшена ширина для кращого вирівнювання */
+            align-items: center;
+        }
+        /* Стиль для профілю */
+        #contacts .google-profile {
+            text-align: right; /* Профіль Google Scholar праворуч */
+            margin-left: 20px; /* Додано трохи відступу зліва, щоб не був надто праворуч */
+        }
+        #contacts .email {
+            text-align: left; /* Пошта по лівому краю */
+        }
+        #contacts .address {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #contacts .address img {
+            margin-right: 10px;
+            width: 30px; /* Маленьке фото біля адреси */
+            height: 30px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <footer>
+        <section id="contacts">
+            <h1>Контакти</h1>
+            <div class="contact-row">
+                <p class="email"><strong>Електронна пошта:</strong><br />
+                    yuliyauyv@gmail.com<br />
+                    uyanovska@umsf.dp.ua</p>
+                <p class="google-profile"><a href="https://scholar.google.com.ua/citations?user=qcpalN0AAAAJ&hl=ru">Профіль у Google Scholar</a></p>
+            </div>
+        
+            <div class="address">
+                <img src="new_design.png" alt="Address Icon"> <!-- Ваше маленьке фото -->
+                <p><strong>Адреса УМСФ:</strong><br />
+                49000, м. Дніпро, вул. Володимира Вернадського 2/4</p>
+            </div>
+
+            <p><strong>Email приймальні:</strong> umsf.pk@gmail.com</p>
+            <p><strong>Телефон приймальної:</strong> (056) 745-55-96</p>
+        </section>
+    </footer>
+</body>
+</html>
+
+
+
