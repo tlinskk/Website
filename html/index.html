@@ -2,9 +2,37 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ульяновська Юлія Вікторівна</title>
+  <title>Обхід вузлів</title>
   <style>
+
+
+    .highlight {
+      outline: 2px solid yellow;
+      background-color: rgba(255, 255, 0, 0.2);
+      scroll-margin: 100px;
+    }
+    #controls {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: white;
+      padding: 10px;
+      border: 1px solid gray;
+      border-radius: 5px;
+      z-index: 9999;
+    }
+    #controls button {
+      margin-right: 10px;
+    }
+
+
+    button {
+      margin: 10px;
+      padding: 10px 15px;
+      font-size: 16px;}
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -58,15 +86,11 @@
     nav ul li a:hover {
       text-decoration: underline;
     }
-    body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #ddd8d8;
-}
+
     .hero {
       display: flex;
-      padding: 40px 40px;
+      flex-wrap: wrap;
+      padding: 40px;
       background-color: #ddd8d8;
       align-items: center;
       justify-content: center;
@@ -79,11 +103,6 @@
       margin-right: 40px;
     }
 
-    .hero-text {
-      max-width: 600px;
-    }
-
-   
     .hero-text h1 {
       margin: 0;
       font-size: 32px;
@@ -101,18 +120,10 @@
       margin-bottom: 20px;
     }
 
-    #education h2 {
-      font-size: 28px;
-    }
-
-    #education li strong {
-      font-size: 20px;
+    .year {
+      font-size: 1.2em;
+      font-weight: bold;
       color: #333;
-    }
-
-    #disciplines h2 {
-      text-align: right;
-      font-size: 24px;
     }
 
     .disciplines {
@@ -127,6 +138,7 @@
       padding: 8px 16px;
       margin: 5px;
       border-radius: 15px;
+      
     }
 
     #contacts {
@@ -144,10 +156,39 @@
       color: white;
       text-align: center;
     }
+
+    .certificates img {
+      max-width: 200px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero img {
+        margin: 0 0 20px 0;
+      }
+    }
   </style>
 </head>
-<body>
 
+<body onload="askBeforeStart()">
+
+
+
+  
+ 
+
+  
+
+
+
+  <div id="content">
   <header>
     <nav>
       <div class="logo">
@@ -158,7 +199,7 @@
         <li><a href="#education">Освіта</a></li>
         <li><a href="#disciplines">Дисципліни</a></li>
         <li><a href="#activity">Діяльність</a></li>
-        <li><a href="#materials">Додатковий матеріал</a></li>
+        <li><a href="#materials">Матеріали</a></li>
         <li><a href="#contacts">Контакти</a></li>
       </ul>
     </nav>
@@ -175,44 +216,20 @@
   <section id="about">
     <h1>Про мене</h1>
     <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
-  
-      <!-- Перший блок -->
-      <div style="display: flex; flex-basis: 100%; align-items: center; flex-direction: row-reverse; justify-content: center; padding: 20px 0;">
-        <img src="umsf-adm.jpg" alt="Фото праворуч" style="width: 300px; height: auto; border-radius: 15px; margin-left: 40px;" />
+      <div style="display: flex; flex-basis: 100%; align-items: center; flex-direction: row-reverse; justify-content: center;">
+        <img src="umsf-adm.jpg" alt="Фото праворуч" style="width: 300px; border-radius: 15px; margin-left: 40px;" />
         <p style="font-size: 1.2em; max-width: 400px;">
           Завідувач кафедри, доцент, кандидат технічних наук та інженерії програмного забезпечення в Університеті митної справи та фінансів.
         </p>
       </div>
-  
-      <!-- Другий блок -->
-      <div style="display: flex; flex-basis: 100%; align-items: center; justify-content: center; padding: 20px 0;">
-        <img src="unnamed.jpg" alt="Фото ліворуч" style="width: 300px; height: auto; border-radius: 10px; margin-right: 40px;" />
+      <div style="display: flex; flex-basis: 100%; align-items: center; justify-content: center;">
+        <img src="unnamed.jpg" alt="Фото ліворуч" style="width: 300px; border-radius: 10px; margin-right: 40px;" />
         <p style="font-size: 1.2em; max-width: 400px;">
           За освітою викладач математики, маю науковий ступінь кандидата технічних наук.
         </p>
       </div>
-  
     </div>
   </section>
-  
-  
-
-  <!DOCTYPE html>
-<html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <title>Освіта</title>
-  <style>
-    .year {
-      font-size: 2em; /* Можна змінити на 1.5em або 20px, як зручно */
-   
-    }
-    #education ul li {
-      margin-bottom: 1em; /* Це і створить ту саму "порожню строчку" */
-    }
-  </style>
-</head>
-<body>
 
   <section id="education">
     <h1>Освіта</h1>
@@ -220,11 +237,8 @@
       <li><strong class="year">1997 р.: </strong> Дніпропетровський національний університет, спеціальність "Математика, викладач математики".</li>
       <li><strong class="year">2005 р.: </strong> Кандидат технічних наук, спеціальність 05.13.06 – автоматизовані системи управління.</li>
     </ul>
+
   </section>
-
-</body>
-</html>
-
 
   <section id="disciplines">
     <h1>Дисципліни</h1>
@@ -240,41 +254,6 @@
       </div>
     </div>
   </section>
-  
-  
-
-  <!DOCTYPE html>
-<html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <title>Діяльність</title>
-  <style>
-    #activity ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    #activity li {
-      display: flex;
-      align-items: flex-start;
-      border-bottom: 1px solid #ccc;
-      padding: 0.5em 0;
-    }
-
-    .year {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #333;
-      width: 140px; /* фіксована ширина для вирівнювання */
-      flex-shrink: 0;
-    }
-
-    .description {
-      flex: 1;
-    }
-  </style>
-</head>
-<body>
 
   <section id="activity">
     <h1>Діяльність</h1>
@@ -300,115 +279,119 @@
         <div class="description">Куратор груп К 21-1м, К 22-1м, К 22-2м.</div>
       </li>
     </ul>
+
   </section>
 
-</body>
-</html>
-
-
-
-
-<section id="materials">
+  <section id="materials">
     <h1>Додатковий матеріал</h1>
     <p><strong>Сертифікати:</strong></p>
     <div class="certificates">
-      <img src="ph1.png" alt="Фото 1">
-      <img src="ph2.jpg" alt="Фото 2">
-      <img src="ph3.png" alt="Фото 3">
+      <img src="ph1.png" alt="Сертифікат 1">
+      <img src="ph2.jpg" alt="Сертифікат 2">
+      <img src="ph3.png" alt="Сертифікат 3">
     </div>
-  
     <p><a href="https://drive.google.com/drive/folders/1P_HT9tmB8ErpB3ldon43uzotQXOplcn0">Усі сертифікати</a></p>
     <p><a href="https://drive.google.com/file/d/1REAPOHEQFfLr2nUF5np_LLbwGoaGRjNh/view">Основні наукові та навчально-методичні праці</a></p>
+
   </section>
+
+  <section id="contacts">
+    <h1>Контакти</h1>
+    <div class="contact-row">
+      <p class="email"><strong>Електронна пошта:</strong><br />
+          yuliyauyv@gmail.com<br />
+          uyanovska@umsf.dp.ua</p>
+      <p class="google-profile"><a href="https://scholar.google.com.ua/citations?user=qcpalN0AAAAJ&hl=ru">Профіль у Google Scholar</a></p>
+  </div>
+
+  <div class="address">
+      <img src="new_design.png" style="width: 50px; height: auto;" alt="Address Icon"> <!-- Ваше маленьке фото -->
+      <p><strong>Адреса УМСФ:</strong><br />
+      49000, м. Дніпро, вул. Володимира Вернадського 2/4</p>
+  </div>
+
+  <p><strong>Email приймальні:</strong> umsf.pk@gmail.com</p>
+  <p><strong>Телефон приймальної:</strong> (056) 745-55-96</p>
+
+  </section>
+
+  <footer>
+    &copy; 2025 Ульяновська Ю.В. Всі права захищені.
+  </footer>
+
+  <div id="controls">
+    <button onclick="highlightNext()">Наступний вузол</button>
+    <button onclick="highlightPrev()">Назад</button>
+    <button onclick="clearHighlight()">Вихід</button>
+  </div>
   
-  <style>
-    .certificates {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 15px;
+  <script>
+    let elements = [];
+    let currentIndex = -1;
+
+    function getAllElements(root) {
+      const result = [];
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT);
+      let node = walker.nextNode();
+      while (node) {
+        result.push(node);
+        node = walker.nextNode();
+      }
+      return result;
     }
-  
-    .certificates img {
-      width: 260px;
-      height: auto;
-      border-radius: 5px;
-      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+
+    function highlight(index) {
+      if (elements[currentIndex]) {
+        elements[currentIndex].classList.remove("highlight");
+      }
+      currentIndex = index;
+      const el = elements[currentIndex];
+      el.classList.add("highlight");
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    function highlightNext() {
+      if (elements.length === 0) {
+        elements = getAllElements(document.getElementById("content"));
+      }
+      const nextIndex = (currentIndex + 1) % elements.length;
+      highlight(nextIndex);
+    }
+
+    function highlightPrev() {
+      if (elements.length === 0) {
+        elements = getAllElements(document.getElementById("content"));
+      }
+      const prevIndex = (currentIndex - 1 + elements.length) % elements.length;
+      highlight(prevIndex);
+    }
+
+    function clearHighlight() {
+      if (elements[currentIndex]) {
+        elements[currentIndex].classList.remove("highlight");
+      }
+      currentIndex = -1;
+    }
+
+    function askBeforeStart() {
+      const start = confirm("Почати обхід?");
+      if (start) {
+        highlightNext(); // Почати з першого елемента
+      }
+    }
+  </script>
+
+  <style>
+    .highlight {
+      outline: 2px solid red;
+      background-color: yellow;
     }
   </style>
   
-  
-  <!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакти</title>
-    <style>
-        footer {
-            text-align: center; /* Все в середині */
-            padding: 20px;
-            font-family: Arial, sans-serif;
-        }
-        #contacts {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-        #contacts p {
-            margin: 10px 0;
-        }
-        /* Стиль для рядка з поштою і профілем */
-        #contacts .contact-row {
-            display: flex;
-            justify-content: space-between;
-            width: 80%; /* Зменшена ширина для кращого вирівнювання */
-            align-items: center;
-        }
-        /* Стиль для профілю */
-        #contacts .google-profile {
-            text-align: right; /* Профіль Google Scholar праворуч */
-            margin-left: 20px; /* Додано трохи відступу зліва, щоб не був надто праворуч */
-        }
-        #contacts .email {
-            text-align: left; /* Пошта по лівому краю */
-        }
-        #contacts .address {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        #contacts .address img {
-            margin-right: 10px;
-            width: 30px; /* Маленьке фото біля адреси */
-            height: 30px;
-            object-fit: cover;
-        }
-    </style>
-</head>
-<body>
-    <footer>
-        <section id="contacts">
-            <h1>Контакти</h1>
-            <div class="contact-row">
-                <p class="email"><strong>Електронна пошта:</strong><br />
-                    yuliyauyv@gmail.com<br />
-                    uyanovska@umsf.dp.ua</p>
-                <p class="google-profile"><a href="https://scholar.google.com.ua/citations?user=qcpalN0AAAAJ&hl=ru">Профіль у Google Scholar</a></p>
-            </div>
-        
-            <div class="address">
-                <img src="new_design.png" alt="Address Icon"> <!-- Ваше маленьке фото -->
-                <p><strong>Адреса УМСФ:</strong><br />
-                49000, м. Дніпро, вул. Володимира Вернадського 2/4</p>
-            </div>
 
-            <p><strong>Email приймальні:</strong> umsf.pk@gmail.com</p>
-            <p><strong>Телефон приймальної:</strong> (056) 745-55-96</p>
-        </section>
-    </footer>
 </body>
 </html>
+
 
 
 
